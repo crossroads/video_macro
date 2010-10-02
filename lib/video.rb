@@ -6,8 +6,14 @@ class VideoMacro
   end
 
   def execute
-    src_url = URI.join(@mingle_assets_baseurl, @parameters['file'].strip).to_s
-    %Q{<embed src="#{src_url}" width="#{@parameters['width']}" height="#{@parameters['height']}" />}
+    file, width, height = if @parameters['params']
+      @parameters['params'].split('|').map{|p| p.strip }
+    else
+      %w(file width height).map{|p| @parameters[p] }
+    end
+    
+    src_url = URI.join(@mingle_assets_baseurl, file.strip).to_s
+    %Q{<embed src="#{src_url}" width="#{width}" height="#{height}" />}
   end
 
   def can_be_cached?
