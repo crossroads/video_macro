@@ -11,3 +11,7 @@ Example:
          width: 892
          height: 640 }}
 }}
+
+OR
+
+{{ video params: 2009-05-06_1628_CreateHAYD.swf | 892 | 640 }}
