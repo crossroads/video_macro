@@ -1,0 +1,13 @@
+Mingle Macro - Video
+====================
+
+- Allows videos from http://mingle-assets.crossroads.org.hk to be embedded on a mingle page.
+
+Example:
+
+{{
+    video
+         file: 2009-05-06_1628_CreateHAYD.swf
+         width: 892
+         height: 640 }}
+}}
