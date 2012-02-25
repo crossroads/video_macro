@@ -13,7 +13,7 @@ class VideoMacro
     end
     
     src_url = URI.join(@mingle_assets_baseurl, file.strip).to_s
-    %Q{<embed src="#{src_url}" width="#{width}" height="#{height}" />}
+    %Q{<embed type="application/x-shockwave-flash" src="#{src_url}" width="#{width}" height="#{height}" />}
   end
 
   def can_be_cached?
